@@ -2,22 +2,24 @@
 
 <html>
 <head>
-    //<link rel="stylesheet" type="text/css" href="main.css">
     <title>Fedora</title>
-    <script src="LAB.min.js"></script>
-    <script>
-
-        /*$LAB
-                .script('game.js').wait()
-                .script('player.js').wait()
-                .script('platform.js').wait(function () {
-                    Game.start('mycanvas', 800, 480);
-                });*/
-    </script>
-    <script src="test.js"></script>
+    
 </head>
 <body>
-<h1>This is our Game!</h1>
+   <canvas id = "myCanvas"></canvas>
+   
+   <script>
+var canvas = document.getElementById('myCanvas');
+var context = canvas.getContext('2d');
+	
+canvas.height = 280;
+canvas.width = 500;
+var img = new Image();
+img.onload = function () {
+    context.drawImage(img, 0, 0);
+}
+img.src = "assets/Fedora.png";
+    </script>
 </body>
 
 </html>
